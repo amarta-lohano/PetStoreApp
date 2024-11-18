@@ -1,0 +1,10 @@
+## Ignore Visual Studio temporary files, build results, and user-specific files
+*.user
+*.suo
+*.csproj.user
+.vs/
+
+## Ignore build results
+bin/
+obj/
+TestResults/
