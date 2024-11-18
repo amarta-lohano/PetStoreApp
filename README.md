@@ -22,3 +22,19 @@ This application interacts with the PetStore API to retrieve available pets, gro
 3. Run the application:
    ```bash
    dotnet run
+## ChatGPT Assistance
+
+During the development of this solution, some code was generated using ChatGPT to assist with tasks reading pets data.
+
+### Example ChatGPT Interaction for Fetching Pets by Category:
+
+
+```csharp
+public List<Pet> GetPetsByCategoryAndSortByName(List<Pet> pets)
+{
+    return pets
+        .GroupBy(pet => pet.Category.Name)
+        .OrderBy(g => g.Key)
+        .SelectMany(group => group.OrderByDescending(p => p.Name))
+        .ToList();
+}
